@@ -17,10 +17,14 @@
         }
 
 .cabecalho {
+ .conteudo-direita {
     display: flex;
-    align-items: flex-start; /* Alinha os elementos pelo topo */
-    gap: 5x;
-    padding: 10px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.conteudo-direita h1 {
+    margin-top: 0;
 }
 
         .logo {
@@ -67,18 +71,16 @@
             color: white;
         }
 
-        .azul {'
-            background-color: #00FFFF;
-            color: black;
-        }
-
+        .azul {
+		    background-color: #00FFFF;
+		    color: black;
+		}
+    
         /* ÍCONE */
         .icone {
             width: 24px;
             height: 24px;
-
             margin-right: 10px;
-
             flex-shrink: 0;
         }
 
@@ -216,16 +218,12 @@
                    O nome do arquivo é o mesmo nome da Músicas
                 */
 
-                link.href =
-                    "Músicas/" +
-                    encodeURIComponent(musica.nome) +
-                    ".html";
-
-
+				link.href = "Músicas/" +
+    				encodeURIComponent(musica.nome) + ".html";
+				
                 /* ÍCONE DO DOCUMENTO */
 
                 link.innerHTML = `
-
                     <svg
                         class="icone"
                         viewBox="0 0 24 24"
