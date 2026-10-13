@@ -1,31 +1,41 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
+
     <title> MÚSICA DE VIOLA CAIPIRA </title>
+
     <style>
+
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
         }
+
 .cabecalho {
     display: flex;
     align-items: flex-start; /* Alinha os elementos pelo topo */
     gap: 5x;
     padding: 10px;
 }
+
         .logo {
             width: 280px;
             height: 250px;
             object-fit: contain;
         }
+
         #pesquisa {
             width: 400px;
             height: 30px;
             padding: 5px 5px;
             font-size: 20px
         }
+
         /* LISTA */
         #secao {
             list-style: none;
@@ -33,9 +43,11 @@
             margin: 0 0 0 280px;
             width: 300px;
         }
+
         #secao li {
             margin-bottom: 5px;
-       }
+        }
+
         /* BOTÃO */
         .musica {
             display: inline-flex;
@@ -47,28 +59,40 @@
             text-decoration: none;
             box-sizing: border-box;
         }
+
         /* CORES */
+
         .verde {
             background-color: #00A443;
             color: white;
         }
+
         .azul {'
             background-color: #00FFFF;
             color: black;
         }
+
         /* ÍCONE */
         .icone {
             width: 24px;
             height: 24px;
+
             margin-right: 10px;
+
             flex-shrink: 0;
         }
+
     </style>
+
 </head>
+
 <body>
+
+
     <!-- CABEÇALHO -->
     <div class="cabecalho">
-     <!-- 1. A logo vem primeiro para ficar na esquerda -->
+        
+        <!-- 1. A logo vem primeiro para ficar na esquerda -->
         <img
             src="Ícones/VIOLA_CAIPIRA_Amigos do Vale Catarinense.jpg"
             class="logo"
@@ -80,16 +104,25 @@
             <input
                 type="text"
                 id="pesquisa"
-                placeholder="Pesquisar Musicae...">
-       </div>
+                placeholder="Pesquisar Índice...">
+        </div>
+
     </div>
-   <!-- LISTA DAS MÚSICAS -->
+
+
+    <!-- LISTA DAS MÚSICAS -->
+
     <ul id="secao"></ul>
+
+
     <script>
+
         /* =====================================================
            RELAÇÃO DAS MÚSICAS
            ===================================================== */
+
         const musicas = [
+
             { nome: "A CANETA E A ENXADA", cor: "verde" },
 			{ nome: "A CAPA DO VIAJANTE", cor: "verde" },
 			{ nome: "A ESTRADA DO SERTÃO", cor: "verde" },
@@ -153,26 +186,46 @@
 			{ nome: "TOCANDO EM FRENTE", cor: "verde" },
 			{ nome: "VELHO AMOR", cor: "verde" },
 			{ nome: "VOCÊ VAI GOSTAR", cor: "verde" }			
+
         ];
+
+
         /* =====================================================
            GERA A LISTA
            ===================================================== */
+
         const lista = document.getElementById("secao");
+
+
         function gerarLista() {
+
             lista.innerHTML = "";
+
+
             musicas.forEach(function(musica) {
+
                 const li = document.createElement("li");
+
+
                 const link = document.createElement("a");
+
                 link.className = "musica " + musica.cor;
+
+
                 /*
                    O nome do arquivo é o mesmo nome da música
                 */
+
                 link.href =
                     "Música/" +
                     encodeURIComponent(musica.nome) +
                     ".html";
+
+
                 /* ÍCONE DO DOCUMENTO */
+
                 link.innerHTML = `
+
                     <svg
                         class="icone"
                         viewBox="0 0 24 24"
@@ -181,56 +234,92 @@
                         stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round">
+
                         <path d="M6 2h8l4 4v16H6z"></path>
+
                         <path d="M14 2v5h5"></path>
+
                         <line
                             x1="9"
                             y1="12"
                             x2="15"
                             y2="12">
                         </line>
+
                         <line
                             x1="9"
                             y1="16"
                             x2="15"
                             y2="16">
                         </line>
+
                         <line
                             x1="9"
                             y1="20"
                             x2="13"
                             y2="20">
                         </line>
+
                     </svg>
+
                     ${musica.nome}
+
                 `;
+
+
                 li.appendChild(link);
+
                 lista.appendChild(li);
+
             });
+
         }
+
+
         /* GERA A LISTA */
+
         gerarLista();
+
+
         /* =====================================================
            PESQUISA
            ===================================================== */
+
         document
             .getElementById("pesquisa")
             .addEventListener("input", function() {
+
                 const texto =
                     this.value.toLowerCase();
+
+
                 const itens =
                     document.querySelectorAll("#secao li");
+
+
                 itens.forEach(function(item) {
+
                     const nome =
                         item.innerText.toLowerCase();
+
+
                     if (nome.includes(texto)) {
+
                         item.style.display = "";
+
                     } else {
+
                         item.style.display = "none";
+
                     }
+
                 });
+
             });
+
     </script>
+
+
 </body>
 
 </html>
