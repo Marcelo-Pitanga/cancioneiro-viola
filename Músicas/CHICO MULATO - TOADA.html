@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>CHICO MULATO - TOADA</title>
+
+    <style>
+        .musica {
+            font-family: 'Courier New', monospace;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.1;
+            white-space: pre;
+            overflow-x: auto;
+            margin: 0;
+        }
+
+        .musica p, .musica div, .musica pre {
+            margin: 0;
+            padding: 0;
+        }
+
+        .cifra {
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.0;
+        }
+
+        .tablatura {
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 0.95;
+            margin: 0;
+        }
+
+        .diagramas {
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.0;
+            color: black;
+            font-weight: bold;
+        }
+
+        .Declamado {
+            font-family: 'Courier New', monospace;
+            font-size: 22px;
+            line-height: 1.6;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Estilo do botão de imprimir na tela */
+        .barra-acoes {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 12px;
+        }
+
+        .btn-imprimir {
+            background: linear-gradient(to bottom, #9c6a3b, #7a4a20, #5e3415);
+            color: #fff8dc;
+            border: 2px solid #4a2c12;
+            padding: 10px 18px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .btn-imprimir:hover {
+            filter: brightness(1.1);
+        }
+
+        /* Configurações exclusivas para impressão / salvar PDF em A4 */
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 10mm;
+            }
+
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .barra-acoes {
+                display: none !important;
+            }
+
+            .musica, .cifra {
+                font-size: 14.5px !important;
+                overflow-x: visible !important;
+            }
+
+            .tablatura {
+                font-size: 12px !important;
+            }
+
+            .Declamado {
+                font-size: 15.5px !important;
+                line-height: 1.3 !important;
+            }
+
+            .diagramas {
+                font-size: 11px !important;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA DO TÍTULO - CLICÁVEL PARA VOLTAR AO MENU -->
+    <a href="../index.html"
+       style="
+           position: relative;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           background: linear-gradient(
+               to bottom,
+               #9c6a3b,
+               #7a4a20,
+               #5e3415
+           );
+           color: #fff8dc;
+           padding: 12px 15px;
+           border: 3px solid #4a2c12;
+           border-radius: 4px;
+           font-size: 40px;
+           font-weight: bold;
+           text-decoration: none;
+           box-shadow:
+               inset 0 2px 2px rgba(255,255,255,0.15),
+               inset 0 -2px 2px rgba(0,0,0,0.3),
+               3px 3px 8px rgba(0,0,0,0.4);
+       ">
+        <span style="position: absolute; left: 40px; font-size: 40px;">♫</span>
+        <span>CHICO MULATO - TOADA</span>
+    </a>
+
+    <!-- BOTÃO PARA IMPRIMIR OU SALVAR EM PDF A4 -->
+    <div class="barra-acoes">
+        <button class="btn-imprimir" onclick="window.print()">🖨️ Imprimir / Salvar PDF (A4)</button>
+    </div>
+
+    <!-- AQUI COMEÇA A MÚSICA -->
+    <div class="musica">
+Interprete: Rolando Boldrin
+Composição: Raul Torres / João Pacífico
+Ritmo: Toada                                         <span style="color: red;">
+Tom: A      Introdução:  A    E7    A    E7    A   A  </span>
+<div class="tablatura">Viola 
+E ╓──9──9──8──7──7──5──4───10──9──9──7──5───9──7──7──5───7──5──12──9──────────────╖
+B ╟──────────────────────────────────────────────────────────────────10───────────╢
+G#╟──8──8──7──6──6──5──3───10──8──8──7──5───8──6──6──5───6──5───────────10────────╢
+E ╟─────────────────────────────────────────────────────────────────────────9──8──╢
+B ╙───────────────────────────────────────────────────────────────────────────────╜</div> <span class="Declamado">
+Declamado:
+"Na vorta daquela estrada,  Bem em frente uma encruzilhada,  Todo ano a Gente Via  
+ Lá no meio do terreiro,  A imagem do padroeiro,  São João da freguesia
+ Do lado tinha a fogueira,  Em redor a noite inteira,  Tinha caboclo bom e Violeiro
+ E uma tar de Terezinha,  Cabocla bem bonitinha,  Sambava nesse terreiro
+ Era noite de São João,  Tava tudo no serão,  Tava Romão o cantador
+ Quando foi de madrugada,  Saiu com Tereza pra estrada,  Tarvez confessar Seu Amor
+ Chico Mulato era o festeiro,  Caboclo bom violeiro,  Sentiu frio seu coração
+ Tirou da cinta um punhá,  E foi os dois encontrá,  Era o rival seu irmão
+ Hoje na vorta da estrada,  Em frente àquela encruzilhada,  Ficou tão triste o Sertão
+ Por causa de Terezinha,  Essa tar de cabocinha,   Nunca mais teve São João"</span> <span class="cifra">
+
+   A                   E7              D        A </span>
+Tapera de beira da estrada que vive assim descoberta <span class="cifra">
+     D                   E7                    A</span>
+Por dentro não tem mais nada por isso ficou deserta <span class="cifra">
+   A            E7          D        A </span>
+Morava Chico Mulato o maió dos cantadô <span class="cifra">
+      D                 E7                      A </span>
+Mas quando Chico foi embora na vila ninguém sambou <span class="cifra">
+   D            E7                   A   Solo: E D A E A ( 1 x ) </span>
+Morava Chico Mulato o maió dos cantadô <span class="cifra">
+
+ 
+   A               E7             D      A </span>
+A causa dessa tristeza sabida em todo lugar <span class="cifra">
+    D            E7                       A </span>
+Foi a cabocla Tereza com outro ela foi morar <span class="cifra">
+      A           E7            D         A </span>
+E o Chico acabrunhado largou então de cantar <span class="cifra">
+   D              E7                    A </span>
+Vivia triste o calado querendo só se matar <span class="cifra">
+      D           E7                      A   Solo: E D  A  E  A( 1 x ) </span>
+E o Chico acabrunhado largou então de cantar <span class="cifra">
+
+
+  A               E7              D        A </span>
+Emagrecendo o coitado foi indo inté se acabar <span class="cifra">
+    D                E7                            A </span>
+Chorando tanto a saudade de quem não quis mais voltar <span class="cifra">
+   A             E7           D       A </span>
+E todo mundo chorava e morte do cantadô <span class="cifra">
+     D               E7                      A </span>
+Não tem batuque nem samba sertão inteiro chorou <span class="cifra">
+   D             E7            D       A  Finaliza Ralentando </span>
+E todo mundo chorava  a morte do cantadô  <div class="diagramas">
+
+        A         D         E7
+    ╒═╤═╤═╤═╕ ╒═╤═╤═╤═╕ ╒═╤═╤═╤═╕
+1°  │ │ 1 │ │ │ │ 1 │ │ │ │ │ │ │
+    ╞═╪═╪═╪═╡ ╞═╪═╪═╪═╡ ╞═╪═╪═╪═╡
+2°  2 │ │ 3 │ │ 2 │ │ │ │ │ │ │ │
+    ╞═╪═╪═╪═╡ ╞═╪═╪═╪═╡ ╞═╪═╪═╪═╡
+3°  │ │ │ │ │ 3 │ │ 4 │ │ │ │ 4 │
+    ╞═╪═╪═╪═╡ ╞═╪═╪═╪═╡ ╞═╪═╪═╪═╡
+4°  │ │ │ │ │ │ │ │ │ │ │ │ │ │ │
+    ╞═╪═╪═╪═╡ ╞═╪═╪═╪═╡ ╞═╪═╪═╪═╡
+5°  │ │ │ │ │ │ │ │ │ │ │ │ │ │ │
+    ╞═╪═╪═╪═╡ ╞═╪═╪═╪═╡ ╞═╪═╪═╪═╡
+6°  │ │ │ │ │ │ │ │ │ │ │ │ │ │ │
+    ╘═╧═╧═╧═╛ ╘═╧═╧═╧═╛ ╘═╧═╧═╧═╛
+</div>
+    <!-- AQUI TERMINA A MÚSICA -->
+
+</body>
+</html>
